@@ -228,3 +228,5 @@ E-Bike
 [法国 ebike]
 /\b(France|French|Paris)\b/
 +cargo
+
+/\bbike\b/
