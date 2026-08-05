@@ -492,6 +492,7 @@ custom:
       report_mode: "daily"         # 周末看全天汇总
       # once 继承 default（push: true）→ 窗口内只推一次
 
+      collect: true
     evening_summary:
       name: "晚间汇总"
       start: "19:00"
@@ -513,11 +514,12 @@ custom:
   # 你可以定义多个日计划（如 workday 和 weekend），
   # 然后在第 3 步的 week_map 中分配给不同的星期。
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      collect: true
   day_plans:
     workday:                       # 工作日计划
-      periods: ["deep_quiet", "weekday_morning", "evening_summary"]
+      periods: ["deep_quiet", "weekday_morning"]
     weekend:                       # 周末计划（用 weekend_morning 替换 weekday_morning）
-      periods: ["deep_quiet", "weekend_morning", "evening_summary"]
+      periods: ["deep_quiet", "weekend_morning"]
 
 
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -531,7 +533,7 @@ custom:
     3: "workday"                   # 周三
     4: "workday"                   # 周四
     5: "workday"                   # 周五
-    6: "weekend"                   # 周六 → 周末计划
+    6: "workday"                   # 周六 → 周末计划
     7: "weekend"                   # 周日
 
 
