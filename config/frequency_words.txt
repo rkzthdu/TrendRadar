@@ -158,6 +158,9 @@ Riese & Müller
 Urban Arrow
 muli cycle
 
+/\bebike\b/
+
+/\bcargo\b/
 
 # ═══════════════════════════════════════════════════════════════
 #                         ebike相关的国家与地区政策
