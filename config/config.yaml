@@ -149,6 +149,14 @@ rss:
       name: "peopleforbikes"
       url: "https://www.peopleforbikes.org/news?format=rss"
 
+   - id: "bike-eu-ebikes"
+      name: "Bike EU ebike"
+      url: "https://cms.bike-eu.com/rss_feed/e-bike-updates"
+
+   - id: "bike-eu-news-marketing"
+      name: "Bike EU"
+      url: "https://cms.bike-eu.com/rss_feed/news-marketing"
+
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
