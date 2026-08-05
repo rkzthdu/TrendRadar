@@ -168,11 +168,27 @@ muli cycle
 
 [美国 ebike]
 /\b(US|USA|United States|American)\b/
-ebike
++ebike
 
 [英国 ebike]
 /\b(United Kingdom|Britain|British|London|UK)\b/
-ebike
++ebike
+
+[丹麦 ebike]
+/\b(Danmark|Danish|Copenhagen)\b/
++ebike
+
+[荷兰 ebike]
+/\b(Netherlands|Dutch|Hague)\b/
++ebike
+
+[比利时 ebike]
+/\b(Belgium|Belgian|Brussels)\b/
++ebike
+
+[法国 ebike]
+/\b(France|French|Paris)\b/
++ebike
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -181,5 +197,24 @@ ebike
 
 [美国 cargo]
 /\b(US|USA|United States|American)\b/
-cargo
++cargo
 
+[英国 ebike]
+/\b(United Kingdom|Britain|British|London|UK)\b/
++cargo
+
+[丹麦 ebike]
+/\b(Danmark|Danish|Copenhagen)\b/
++cargo
+
+[荷兰 ebike]
+/\b(Netherlands|Dutch|Hague)\b/
++cargo
+
+[比利时 ebike]
+/\b(Belgium|Belgian|Brussels)\b/
++cargo
+
+[法国 ebike]
+/\b(France|French|Paris)\b/
++cargo
