@@ -158,6 +158,14 @@ Riese & Müller
 Urban Arrow
 muli cycle
 
+e-bike
+
+electric bicycle
+
+electric bike
+
+pedelec
+
 /\bebike\b/
 
 /\bcargo\b/
