@@ -166,6 +166,8 @@ electric bike
 
 pedelec
 
+E-Bike
+
 /\bebike\b/
 
 /\bcargo\b/
