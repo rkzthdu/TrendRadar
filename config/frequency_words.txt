@@ -230,3 +230,6 @@ E-Bike
 +cargo
 
 /\bbike\b/
+
+[中文内容 bike-eu]
+自行車
