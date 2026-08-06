@@ -40,7 +40,7 @@ app:
 # 详细时间线图请查看 config/timeline.yaml
 # ===============================================================
 schedule:
-  enabled: true                        # 是否启用调度系统（true=启用, false=关闭，默认关闭）
+  enabled: false                        # 是否启用调度系统（true=启用, false=关闭，默认关闭）
   preset: "morning_evening"            # 预设模板名称（见上方说明）
 
 
@@ -62,7 +62,7 @@ schedule:
 #     只要 api_url 不是你自己部署的实例，都推荐配置 expected_domain
 # ===============================================================
 platforms:
-  enabled: true                         # 是否启用热榜平台抓取（true=启用, false=关闭）
+  enabled: false                         # 是否启用热榜平台抓取（true=启用, false=关闭）
   api_url: ""                            # 热榜数据 API 地址（留空使用默认地址）
                                         # 如果你自行部署了 newsnow，填入你的地址，如: https://your-domain.com/api/s
   sources:
@@ -111,7 +111,7 @@ platforms:
 # max_age_days: 可选，覆盖全局 freshness_filter.max_age_days
 # ===============================================================
 rss:
-  enabled: true                       # 是否启用 RSS 抓取（true=启用, false=关闭）
+  enabled: false                       # 是否启用 RSS 抓取（true=启用, false=关闭）
 
   # 文章新鲜度过滤（过滤超龄旧文章，避免重复推送）
   # 仅在推送阶段过滤，所有文章仍会存入数据库
