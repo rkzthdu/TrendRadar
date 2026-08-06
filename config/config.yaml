@@ -130,32 +130,43 @@ rss:
     - id: "bbc-news"
       name: "BBC News"
       url: "http://feeds.bbci.co.uk/news/rss.xml"
+      max_age_days: 0
 
     - id: "cnn-news"
       name: "CNN news"
       url: "http://rss.cnn.com/rss/edition.rss"
       enabled: false                  # 禁用
-      # max_age_days: 3               # 示例：推送 3 天内的文章（更新较慢的博客）
+      max_age_days: 0                 # 示例：推送 3 天内的文章（更新较慢的博客）
      
     - id: "france24-news"
       name: "france24 news"
       url: "https://www.france24.com/en/rss"
+      max_age_days: 0
      
     - id: "zeit-news"
       name: "ZEIT ONLINE"
       url: "http://newsfeed.zeit.de/index"
+      max_age_days: 0
 
    - id: "peopleforbikes-news"
       name: "peopleforbikes"
       url: "https://www.peopleforbikes.org/news?format=rss"
+      max_age_days: 0
 
    - id: "bike-eu-ebikes"
       name: "Bike EU ebike"
       url: "https://cms.bike-eu.com/rss_feed/e-bike-updates"
+      max_age_days: 0
 
    - id: "bike-eu-news-marketing"
       name: "Bike EU"
       url: "https://cms.bike-eu.com/rss_feed/news-marketing"
+      max_age_days: 0
+
+   - id: "bike-eu-news-marketing"
+      name: "Bike EU"
+      url: "https://cms.bike-eu.com/rss_feed/news-marketing"
+      max_age_days: 0
 
     # 自定义源示例
     # - id: "custom-feed"
