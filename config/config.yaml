@@ -41,7 +41,7 @@ app:
 # ===============================================================
 schedule:
   enabled: true                        # 是否启用调度系统（true=启用, false=关闭，默认关闭）
-  preset: "morning_evening"            # 预设模板名称（见上方说明）
+  preset: "custom"                     # 预设模板名称（见上方说明）
 
 
 # ===============================================================
@@ -97,71 +97,270 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-    - id: "bbc-news"
+    - id: "bbc-news"                   # 英国
       name: "BBC News"
       url: "http://feeds.bbci.co.uk/news/rss.xml"
-      max_age_days: 0
+      max_age_days: 180
 
-    - id: "cnn-news"
+    - id: "guardian-news"
+      name: "The Guardian"
+      url: "https://www.theguardian.com/world/rss"
+      max_age_days: 180
+
+    - id: "Mail-Online-news"
+      name: "Mail Online"
+      url: "https://www.dailymail.co.uk/home/index.rss"
+      max_age_days: 180
+
+    - id: "independent-uk"
+      name: "The Independent UK"
+      url: "http://www.independent.co.uk/news/uk/rss"
+      max_age_days: 180
+    
+    - id: "daily-express-news"
+      name: "Daily Express :: News Feed"
+      url: "http://feeds.feedburner.com/daily-express-news-showbiz"
+      max_age_days: 180
+
+    - id: "cnn-news"                   # 美国
       name: "CNN news"
       url: "http://rss.cnn.com/rss/edition.rss"
-      enabled: false                  # 禁用
-      max_age_days: 0                 # 示例：推送 3 天内的文章（更新较慢的博客）
+      max_age_days: 180
+
+    - id: "huffpost-world"
+      name: "World News - Breaking News, Top Stories"
+      url: "https://www.huffpost.com/section/world-news/feed"
+      max_age_days: 180
+    
+    - id: "nyt-top-stories"
+      name: "NYT > Top Stories"
+      url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+      max_age_days: 180
+    
+    - id: "fox-news"
+      name: "FOX News"
+      url: "http://feeds.foxnews.com/foxnews/latest"
+      max_age_days: 180
+    
+    - id: "washington-post-world"
+      name: "World"
+      url: "http://feeds.washingtonpost.com/rss/world"
+      max_age_days: 180
+    
+    - id: "wsj-world-news"
+      name: "WSJ.com: World News"
+      url: "https://feeds.a.dj.com/rss/RSSWorldNews.xml"
+      max_age_days: 180
+    
+    - id: "la-times-world-nation"
+      name: "World & Nation"
+      url: "https://www.latimes.com/world-nation/rss2.0.xml"
+      max_age_days: 180
+    
+    - id: "yahoo-news"
+      name: "Yahoo News - Latest News & Headlines"
+      url: "https://news.yahoo.com/rss/mostviewed"
+      max_age_days: 180
+    
+    - id: "cnbc-us-top-news"
+      name: "US Top News and Analysis"
+      url: "https://www.cnbc.com/id/100003114/device/rss/rss.html"
+      max_age_days: 180
+    
+    - id: "politico-playbook"
+      name: "Playbook"
+      url: "https://rss.politico.com/playbook.xml"
+      max_age_days: 180
      
-    - id: "france24-news"
+    - id: "france24-news"               # 法国
       name: "france24 news"
       url: "https://www.france24.com/en/rss"
-      max_age_days: 0
+      max_age_days: 180
+
+    - id: "mediapart"
+      name: "Mediapart"
+      url: "https://www.mediapart.fr/articles/feed"
+      max_age_days: 180
+    
+    - id: "paris-star"
+      name: "Paris Star"
+      url: "https://www.parisstaronline.com/feed"
+      max_age_days: 180
+    
+    - id: "le-monde"
+      name: "Le Monde.fr - Actualités et Infos en France et dans le monde"
+      url: "https://www.lemonde.fr/rss/une.xml"
+      max_age_days: 180
+    
+    - id: "lobs"
+      name: "L'Obs - A la une"
+      url: "https://www.nouvelobs.com/a-la-une/rss.xml"
+      max_age_days: 180
+    
+    - id: "franceinfo"
+      name: "Franceinfo - Les Titres"
+      url: "https://www.francetvinfo.fr/titres.rss"
+      max_age_days: 180
+    
+    - id: "huffington-post-fr"
+      name: "Le Huffington Post"
+      url: "https://www.huffingtonpost.fr/feeds/index.xml"
+      max_age_days: 180
+    
+    - id: "la-depeche"
+      name: "La Dépêche du Midi"
+      url: "https://www.ladepeche.fr/rss.xml"
+      max_age_days: 180
+    
+    - id: "diplomatie-gouv"
+      name: "Ministry for Europe and Foreign Affairs - Actualités"
+      url: "https://www.diplomatie.gouv.fr/spip.php?page=backend-fd&lang=en"
+      max_age_days: 180
+    
+    - id: "sudouest-essentiel"
+      name: "L'essentiel"
+      url: "https://www.sudouest.fr/essentiel/rss.xml"
+      max_age_days: 180
+    
+    - id: "ouest-france"
+      name: "Ouest-France - Actualité"
+      url: "https://www.ouest-france.fr/rss-en-continu.xml"
+      max_age_days: 180
      
     - id: "zeit-news"
       name: "ZEIT ONLINE"
       url: "http://newsfeed.zeit.de/index"
-      max_age_days: 0
+      max_age_days: 180
+    
+    - id: "focus-online"
+      name: "FOCUS Online"
+      url: "https://rss.focus.de/fol/XML/rss_folnews.xml"
+      max_age_days: 180
+    
+    - id: "faz-aktuell"
+      name: "Aktuell - FAZ.NET"
+      url: "https://www.faz.net/rss/aktuell/"
+      max_age_days: 180
+    
+    - id: "tagesschau"
+      name: "tagesschau.de - Die Nachrichten der ARD"
+      url: "http://www.tagesschau.de/xml/rss2"
+      max_age_days: 180
+    
+    - id: "deutsche-welle"
+      name: "Deutsche Welle"
+      url: "https://rss.dw.com/rdf/rss-en-all"
+      max_age_days: 180
 
-    #- id: "peopleforbikes-news"
-      #name: "peopleforbikes"
-      #url: "https://www.peopleforbikes.org/news?format=rss"
-      #max_age_days: 0
+    - id: "de-telegraaf"                     # 荷兰
+      name: "De Telegraaf"
+      url: "https://www.telegraaf.nl/rss"
+      max_age_days: 180
+
+    - id: "de-volkskrant"
+      name: "De Volkskrant"
+      url: "https://www.volkskrant.nl/nieuws/rss.xml"
+      max_age_days: 180
+
+    - id: "algemeen-dagblad"
+      name: "Algemeen Dagblad"
+      url: "https://www.ad.nl/rss.xml"
+      max_age_days: 180
+
+    - id: "de-standaard"                    # 比利时
+      name: "De Standaard"
+      url: "https://www.standaard.be/rss"
+      max_age_days: 180
+    
+    - id: "het-nieuwsblad"
+      name: "Het Nieuwsblad"
+      url: "https://www.nieuwsblad.be/rss/"
+      max_age_days: 180
+    
+    - id: "le-soir"
+      name: "Le Soir"
+      url: "https://www.lesoir.be/rss2/31886/cible_principale"
+      max_age_days: 180
+    
+    - id: "hln"
+      name: "HLN (Het Laatste Nieuws)"
+      url: "https://www.hln.be/rss.xml"
+      max_age_days: 180
+
+    - id: "bicycle-retailer"
+      name: "Bicycle Retailer"
+      url: "www.bicycleretailer.com/rss.xml"
+      max_age_days: 180
 
     - id: "bike-eu-news-marketing"
       name: "All updates from Bike Europe"
       url: "https://cms.bike-eu.com/rss_feed/news-marketing"
-      max_age_days: 0
+      max_age_days: 180
 
     - id: "bike-eu-ebikes-business-news"
       name: "Bike EU Business news"
       url: "https://cms.bike-eu.com/rss_feed/business-news"
-      max_age_days: 0
+      max_age_days: 180
 
     - id: "bike-eu-ebikes-updates"
       name: "Bike EU E-bike updates"
       url: "https://cms.bike-eu.com/rss_feed/e-bike-updates"
-      max_age_days: 0
+      max_age_days: 180
 
     - id: "bike-eu-market-reports"
       name: "Bike EU Market reports"
       url: "https://cms.bike-eu.com/rss_feed/bike-eu-market-reports"
-      max_age_days: 0
+      max_age_days: 180
 
     - id: "bike-eu-laws-regulations"
       name: "Bike EU Laws and Regulations"
       url: "https://cms.bike-eu.com/rss_feed/laws-and-regulations"
-      max_age_days: 0
+      max_age_days: 180
 
     - id: "bike-eu-products-innovations"
       name: "Bike EU Products & Innovations"
       url: "https://cms.bike-eu.com/rss_feed/products-and-innovations"
-      max_age_days: 0
+      max_age_days: 180
     
     - id: "bike-eu-events"
       name: "Bike EU International (e-)bike industry events"
       url: "https://cms.bike-eu.com/rss_feed/events"
-      max_age_days: 0
+      max_age_days: 180
 
     - id: "bike-eu-chinees"
-      name: "Bike EU 中文部分"
+      name: "Bike EU 中文网"
       url: "https://cms.bike-eu.com/rss_feed/chinees"
-      max_age_days: 0
+      max_age_days: 180
+
+    - id: "bbc-sport"
+      name: "BBC Sport - Sport"
+      url: "http://feeds.bbci.co.uk/sport/rss.xml"
+      max_age_days: 180
+    
+    - id: "reddit-sports"
+      name: "Reddit Sports"
+      url: "https://www.reddit.com/r/sports.rss"
+      max_age_days: 180
+    
+    - id: "sky-sports"
+      name: "Sports News - Latest Sports and Football News - Sky News"
+      url: "http://feeds.skynews.com/feeds/rss/sports.xml"
+      max_age_days: 180
+    
+    - id: "sportskeeda"
+      name: "Sportskeeda"
+      url: "https://www.sportskeeda.com/feed"
+      max_age_days: 180
+    
+    - id: "yahoo-sports"
+      name: "Yahoo! Sports - News, Scores, Standings, Rumors, Fantasy Games"
+      url: "https://sports.yahoo.com/rss/"
+      max_age_days: 180
+    
+    - id: "espn-top"
+      name: "www.espn.com - TOP"
+      url: "https://www.espn.com/espn/rss/news"
+      max_age_days: 180
 
     # 自定义源示例
     # - id: "custom-feed"
