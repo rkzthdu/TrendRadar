@@ -158,18 +158,15 @@ Riese & Müller
 Urban Arrow
 muli cycle
 
+[e-bike]
 e-bike
-
 electric bicycle
-
 electric bike
-
 pedelec
-
 E-Bike
-
 /\bebike\b/
 
+[cargo]
 /\bcargo\b/
 
 # ═══════════════════════════════════════════════════════════════
@@ -209,27 +206,25 @@ E-Bike
 /\b(US|USA|United States|American)\b/
 +cargo
 
-[英国 ebike]
+[英国 cargo]
 /\b(United Kingdom|Britain|British|London|UK)\b/
 +cargo
 
-[丹麦 ebike]
+[丹麦 cargo]
 /\b(Danmark|Danish|Copenhagen)\b/
 +cargo
 
-[荷兰 ebike]
+[荷兰 cargo]
 /\b(Netherlands|Dutch|Hague)\b/
 +cargo
 
-[比利时 ebike]
+[比利时 cargo]
 /\b(Belgium|Belgian|Brussels)\b/
 +cargo
 
-[法国 ebike]
+[法国 cargo]
 /\b(France|French|Paris)\b/
 +cargo
 
-/\bbike\b/
-
-[中文内容 bike-eu]
+[中文 bike]
 自行車
