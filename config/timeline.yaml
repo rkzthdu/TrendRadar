@@ -442,7 +442,7 @@ custom:
                                    #   filter_method: "ai"
     once:
       analyze: true                # 该时间段内只分析一次（省 API）
-      push: true                   # 该时间段内只推送一次（省打扰）
+      push: false                  # 该时间段内只推送一次（省打扰）
 
 
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -472,23 +472,24 @@ custom:
 
     weekday_morning:
       name: "工作日早间"
-      start: "08:00"
-      end: "10:00"                 # 跨度 2h，留足触发裕量
+      start: "06:00"
+      end: "9:00"                  # 跨度 2h，留足触发裕量
       # frequency_file: "xxx.txt"               # 关键词文件（可选，位于 config/custom/keyword/）
       # interests_file: "xxx.txt"                # AI 兴趣文件（可选，位于 config/custom/ai/）
       # filter_method: "keyword"                # 筛选策略（可选: keyword | ai，不填用全局 filter.method）
+      analyze: true                # 做 AI 分析
       push: true                   # 早上推送一次
-      report_mode: "incremental"   # 只推新增内容
+      report_mode: "daily"         # 当日全部新闻汇总
       # once 继承 default（push: true）→ 窗口内只推一次
 
     weekend_morning:
       name: "周末早间"
-      start: "10:00"
+      start: "9:00"
       end: "12:00"                 # 跨度 2h
       # frequency_file: "xxx.txt"               # 关键词文件（可选，位于 config/custom/keyword/）
       # interests_file: "xxx.txt"                # AI 兴趣文件（可选，位于 config/custom/ai/）
       # filter_method: "keyword"                # 筛选策略（可选: keyword | ai，不填用全局 filter.method）
-      push: true
+      push: false
       report_mode: "daily"         # 周末看全天汇总
       # once 继承 default（push: true）→ 窗口内只推一次
 
@@ -502,7 +503,7 @@ custom:
       # filter_method: "keyword"                # 筛选策略（可选: keyword | ai，不填用全局 filter.method）
       analyze: true                # 晚间做 AI 分析
       ai_mode: "daily"             # AI 也分析全天内容
-      push: true                   # 晚间推送
+      push: false                  # 晚间推送
       report_mode: "daily"         # 当日全部新闻汇总
       # once 继承 default（analyze: true, push: true）→ 只分析/推送一次
 
