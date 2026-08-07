@@ -157,6 +157,11 @@
 Riese & Müller
 Urban Arrow
 muli cycle
+Cargo Cycling
+Veloretti
+/\bEllio\b/
+/\bBabboe\b/
+/\bbakfiets\b/
 
 [e-bike]
 e-bike
@@ -165,9 +170,15 @@ electric bike
 pedelec
 E-Bike
 /\bebike\b/
+elektrische fiets
+elektrofiets
+/\belobike\b/
+/\bfatbike\b/
 
 [cargo]
 /\bcargo\b/
+/\bbakfiets\b/
+transportfiets
 
 # ═══════════════════════════════════════════════════════════════
 #                         ebike相关的国家与地区政策
